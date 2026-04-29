@@ -4,7 +4,8 @@ import { supabaseAdmin } from "@/lib/supabase";
 export async function POST(req: NextRequest) {
   try {
     const { question, spirit, sessionId } = await req.json();
-    if (!question || !spirit || !SPIRITS[spirit as keyof typeof SPIRITS]) return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+    if (!question || !spirit || !SPIRITS[spirit as keyof typeof SPIRITS])
+      return NextResponse.json({ error: "Invalid request" }, { status: 400 });
     const ip = req.headers.get("x-forwarded-for") ?? "unknown";
     const today = new Date().toISOString().split("T")[0];
     const { count } = await supabaseAdmin.from("sessions").select("*", { count: "exact", head: true }).eq("ip_address", ip).gte("created_at", `${today}T00:00:00`);
