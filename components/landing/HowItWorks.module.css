@@ -1,0 +1,10 @@
+.section { padding: var(--sp-20) var(--sp-8); position: relative; z-index: 2; }
+.container { max-width: 1100px; margin: 0 auto; }
+.eyebrow { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--gold); opacity: .5; letter-spacing: .4em; text-transform: uppercase; text-align: center; margin-bottom: var(--sp-4); }
+.heading { font-family: var(--font-display); font-size: var(--text-2xl); color: var(--ivory); text-align: center; letter-spacing: .08em; margin-bottom: var(--sp-16); }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--sp-8); }
+.step { border: 1px solid rgba(201,168,76,.1); border-radius: var(--radius-md); padding: var(--sp-8) var(--sp-6); background: rgba(14,11,20,.5); position: relative; transition: border-color var(--transition), box-shadow var(--transition); }
+.step:hover { border-color: rgba(201,168,76,.25); box-shadow: 0 0 30px rgba(201,168,76,.06); }
+.stepNum { font-family: var(--font-display); font-size: var(--text-xl); color: var(--gold); opacity: .25; margin-bottom: var(--sp-4); letter-spacing: .1em; }
+.stepTitle { font-family: var(--font-display); font-size: var(--text-base); color: var(--ivory); margin-bottom: var(--sp-3); letter-spacing: .1em; }
+.stepDesc { font-size: var(--text-sm); color: var(--ivory-dim); line-height: 1.7; }
