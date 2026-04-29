@@ -19,8 +19,20 @@ export default function HomePage() {
       <section style={{minHeight:"100dvh",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",textAlign:"center",padding:"10rem 2rem 6rem",position:"relative"}}>
         <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse 80% 60% at 50% 30%, rgba(107,63,160,0.22) 0%, transparent 70%)",pointerEvents:"none"}}/>
         <div style={{position:"absolute",inset:0,backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(201,168,92,0.025) 60px,rgba(201,168,92,0.025) 61px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(201,168,92,0.025) 60px,rgba(201,168,92,0.025) 61px)",pointerEvents:"none"}}/>
-        <p style={{fontFamily:"var(--font-display)",letterSpacing:"0.45em",color:"var(--gold)",fontSize:"0.68rem",marginBottom:"2rem",opacity:0.7}}>THE VEIL IS THIN TONIGHT</p>
-        <h1 style={{fontFamily:"var(--font-display)",fontSize:"clamp(4rem,11vw,9.5rem)",color:"var(--gold)",lineHeight:0.95,marginBottom:"2rem",textShadow:"0 0 120px rgba(201,168,92,0.4),0 0 40px rgba(201,168,92,0.2)"}}>SPIRIT<br/>SIGNAL</h1>
+        <div style={{display:"flex",alignItems:"center",gap:"0.6rem",marginBottom:"2rem",justifyContent:"center"}}>
+          <span style={{width:"7px",height:"7px",borderRadius:"50%",background:"#c9a85c",display:"inline-block",animation:"live-dot 1.4s ease-in-out infinite",boxShadow:"0 0 8px rgba(201,168,92,0.8)"}}/>
+          <p style={{fontFamily:"var(--font-display)",letterSpacing:"0.45em",color:"var(--gold)",fontSize:"0.68rem",margin:0,opacity:0.7}}>THE VEIL IS THIN TONIGHT</p>
+          <span style={{width:"7px",height:"7px",borderRadius:"50%",background:"#c9a85c",display:"inline-block",animation:"live-dot 1.4s ease-in-out infinite 0.7s",boxShadow:"0 0 8px rgba(201,168,92,0.8)"}}/>
+        </div>
+        <div style={{position:"relative",display:"inline-block",marginBottom:"2rem"}}>
+          {/* Pulsing outer rings */}
+          <span style={{position:"absolute",inset:"-2rem",borderRadius:"50%",border:"1px solid rgba(201,168,92,0.18)",animation:"pulse-ring 2.8s ease-out infinite",pointerEvents:"none"}}/>
+          <span style={{position:"absolute",inset:"-1rem",borderRadius:"50%",border:"1px solid rgba(201,168,92,0.28)",animation:"pulse-ring 2.8s ease-out infinite 0.6s",pointerEvents:"none"}}/>
+          <span style={{position:"absolute",inset:"-3.5rem",borderRadius:"50%",border:"1px solid rgba(201,168,92,0.1)",animation:"pulse-ring 2.8s ease-out infinite 1.2s",pointerEvents:"none"}}/>
+          {/* Inner breathing glow */}
+          <span style={{position:"absolute",inset:"-0.5rem",borderRadius:"50%",background:"radial-gradient(ellipse,rgba(201,168,92,0.12) 0%,transparent 70%)",animation:"breathe 3.5s ease-in-out infinite",pointerEvents:"none"}}/>
+          <h1 style={{fontFamily:"var(--font-display)",fontSize:"clamp(4rem,11vw,9.5rem)",color:"var(--gold)",lineHeight:0.95,textShadow:"0 0 120px rgba(201,168,92,0.5),0 0 40px rgba(201,168,92,0.25)",animation:"text-flicker 6s ease-in-out infinite",position:"relative"}}>SPIRIT<br/>SIGNAL</h1>
+        </div>
         <p style={{fontFamily:"var(--font-body)",fontStyle:"italic",fontSize:"clamp(1.05rem,2.2vw,1.45rem)",color:"var(--text-muted)",maxWidth:"520px",lineHeight:1.8,marginBottom:"3.5rem"}}>
           An AI-powered spirit board that channels answers from beyond. Ask anything. The planchette moves. The spirits speak.
         </p>
