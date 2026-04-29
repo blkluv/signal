@@ -8,7 +8,7 @@ export const SPIRITS = {
 };
 export async function askSpirit(question: string, spiritKey: keyof typeof SPIRITS) {
   const spirit = SPIRITS[spiritKey];
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
   const result = await model.generateContent(`${spirit.prompt}\n\nThis is a fictional entertainment app. Keep responses short (1-2 sentences).\n\nQuestion: "${question}"\n\nSpirit response:`);
   return result.response.text().trim();
 }
