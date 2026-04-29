@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   try { event = stripe.webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET!); }
   catch { return NextResponse.json({ error: "Invalid signature" }, { status: 400 }); }
   if (event.type === "checkout.session.completed") {
-    const s = event.data.object as Stripe.CheckoutSession;
+    const s = event.data.object as Stripe.Checkout.Session;
     if (s.customer_email && s.metadata?.plan) {
       await supabaseAdmin.from("subscribers").upsert({
         email: s.customer_email, plan: s.metadata.plan,
