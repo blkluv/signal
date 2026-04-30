@@ -1,13 +1,9 @@
-'use client';
+// 'use client';  // ← removed as requested
 
 import Nav from '@/components/landing/Nav';
 import Hero from '@/components/landing/Hero';
 import HowItWorks from '@/components/landing/HowItWorks';
-import Personas from '@/components/landing/Personas';
-import HookExamples from '@/components/landing/HookExamples';
-import Pricing from '@/components/landing/Pricing';
-import Testimonials from '@/components/landing/Testimonials';
-import FinalCTA from '@/components/landing/FinalCTA';
+// Removed: Personas, HookExamples, Pricing, Testimonials, FinalCTA
 import Footer from '@/components/landing/Footer';
 import MistLayer from '@/components/landing/MistLayer';
 import ScrollReveal from '@/components/landing/ScrollReveal';
